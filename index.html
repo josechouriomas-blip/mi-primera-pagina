@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+    body {
+        background-color: lightcoral;
+    }
+
+    .titulo {
+        text-align: center;
+        color: black;
+        font-size: 40px;
+        font-family: Arial, sans-serif;
+        text-shadow: 2px 2px 5px black;
+    }
+    .miBoton {
+        background-color: red;
+        color: black;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    .miBoton:hover {
+        background-color: black;
+        color: white;
+    }
+    #miImagen {
+        transition: width 0.5s ease; /* cambia el tamño suavemente en 0.5 segundos */
+    }
+     </style>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para una persona especial</title>
+</head>
+<body>
+    <h1 class="titulo">Hola mi amor.</h1>
+    <p>Te dedico esta imagen.</p>
+    <center>
+    <img id="miImagen" src="mifoto.jpg" width="300">
+    </center>
+    <center>    
+    <p id="mensaje">Esto lo hice con mucho amor.</p>
+    </center>  
+    <center>
+    <button class="miBoton" onclick="mostrarmensaje()">Presiona aqui</button>
+    <script> 
+    let primeraVez = true;
+        function mostrarmensaje() {
+            const img = document.getElementById("miImagen");
+            const p = document.getElementById("mensaje");
+            if (primeraVez) {
+            p.innerText = "TE AMO😍"; 
+            img.style.width = "400px"; // la imagen crece suavemente
+            primeraVez = false;
+            } else {
+                p.innerText = "Siempre estare contigo 💖";
+                img.style.width = "300px"; // vuelve suavemente al tamaño original
+            }
+        }
+    </script>
+    </center>
+</body>
+</html>
